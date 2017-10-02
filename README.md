@@ -23,7 +23,7 @@ Ideas
 * Provide helper parsing libraries that encourage safety and performance
 * Want to provide as close to C performance as possible for TLS
 * Built in reference counting for heap allocated memory (not sure that I want to have to implement garbage collection)
-* Escape analisys similar to GO for memory allocations
+* Escape analysis similar to GO for memory allocations, i.e. does a memory structure need reference counting or not?  Go uses this to figure out if something should be heap allocated or stack allocated.
 * Strongly typed
 * Generics
 * val and var syntax for variable declarations
@@ -38,6 +38,7 @@ Ideas
 * Built in compiler support to detect use after free bugs
 * String literal interpolation
 * Nullability built into the type system (similar to kotlin in this respect)
+* Method chaining with the `|` operator is an interesting idea (saw this in elm with the `|>` operator.)  This seems to help cleanup wrapped functions calls by allowing you to unwind the calls.
 
 Questions
 =========
