@@ -11,6 +11,7 @@ Target Use Cases
 * Game programming
 * Native GUI applications
 * Replacements for OS modules (need to define this better)
+* Target browsers with a web assembly backend?
 
 Ideas
 =====
@@ -21,11 +22,12 @@ Ideas
 * Automatic bounds checking
 * Provide helper parsing libraries that encourage safety and performance
 * Want to provide as close to C performance as possible for TLS
-* Built in reference counting for heap allocated memory
+* Built in reference counting for heap allocated memory (not sure that I want to have to implement garbage collection)
 * Escape analisys similar to GO for memory allocations
 * Strongly typed
 * Generics
 * val and var syntax for variable declarations
+* Type inference
 * A flowable equivalent to [RxJava](http://reactivex.io/RxJava/2.x/javadoc/io/reactivex/Flowable.html)
 * Want to be able to support zero copy parsing
 * Goal is to be a 'memory safe' language
@@ -34,10 +36,12 @@ Ideas
 * Static and dynamic linking
 * Built in support for a debugger
 * Built in compiler support to detect use after free bugs
+* String literal interpolation
+* Nullability built into the type system (similar to kotlin in this respect)
 
 Questions
 =========
-* Register or Stack based function calls?
+* Register or Stack based function calls?  (Not sure it matters if we're optimizing for fewest clock cycles vs optimal register allocation in the assembly generation)
 * Not sure that Garbage collection should be implemented or if reference counting should be used instead
 * Want to mimic co-routines from Go and Kotlin, but unsure how that will affect wanting to be directly callable from C/C++ code
 * How exactly should modules be declared, and linked together?
