@@ -47,6 +47,6 @@ Questions
 * Not sure that Garbage collection should be implemented or if reference counting should be used instead
 * Want to mimic co-routines from Go and Kotlin, but unsure how that will affect wanting to be directly callable from C/C++ code.  The biggest question here is should the co-routine implementation be stack or offstack based.
 * How exactly should modules be declared, and linked together?
-* How important is ASLR protections in a 'Safe' langage?  As far as I know, [GO lang does not implement this](https://rain-1.github.io/golang-aslr.html), it has been suggested for Rust, but as of this writing it [hasn't been implemented](https://github.com/rust-lang/rust/issues/15179)
+* How important is ASLR protections in a 'Safe' langage?  As far as I know, [GO lang does not implement this](https://rain-1.github.io/golang-aslr.html), it has been suggested for Rust and seems to have been [implemented recently](https://github.com/rust-lang/rust/issues/15179)
 * What is stack safe?  Is this used to help prevent stack smashing?
 * What all can be taken away from category theory and applied to a 'non-academic' language [category-theory](https://github.com/hmemcpy/milewski-ctfp-pdf)
