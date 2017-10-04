@@ -31,7 +31,7 @@ Ideas
 * A flowable equivalent to [RxJava](http://reactivex.io/RxJava/2.x/javadoc/io/reactivex/Flowable.html)
 * Want to be able to support zero copy parsing
 * Goal is to be a 'memory safe' language
-* Curring built in
+* Currying built in
 * Modular linking - goal here is to allow different libraries that have the same dependencies, but at different versions, to be used in the same project.
 * Static and dynamic linking
 * Built in support for a debugger
@@ -39,6 +39,7 @@ Ideas
 * String literal interpolation
 * Nullability built into the type system (similar to kotlin in this respect)
 * Method chaining with the `|` operator is an interesting idea (saw this in elm with the `|>` operator.)  This seems to help cleanup wrapped functions calls by allowing you to unwind the calls.
+* Bit Mapping operations built into the language.  The Goal here would be to help protocol developers to ease the transition away from C based methods, to a new method providing direct mappings to bit offsets in byte blocks that automatically implements the mapping and shift operation.  Basically, the idea here is to allow a developer to specify the structure of the byte block and have it spit out the values for the implementer reducing the chances for errors, and improving a developer's efficiency. 
 
 Questions
 =========
