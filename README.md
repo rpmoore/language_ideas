@@ -20,10 +20,10 @@ Ideas
 * Directly callable from C/C++
 * Can directly call into C/C++ (FFI?)
 * Automatic bounds checking
-* Provide helper parsing libraries that encourage safety and performance
+* Provide helper parsing libraries that encourage safety and performance (interesting paper on parsing in the [rust language](https://blog.acolyer.org/2017/08/15/writing-parsers-like-it-is-2017/)
 * Want to provide as close to C performance as possible for TLS
 * Built in reference counting for heap allocated memory (not sure that I want to have to implement garbage collection)
-* Escape analysis similar to GO for memory allocations, i.e. does a memory structure need reference counting or not?  Go uses this to figure out if something should be heap allocated or stack allocated.
+* Escape analysis similar to Go for memory allocations, i.e. does a memory structure need reference counting or not?  Go uses this to figure out if something should be heap allocated or stack allocated.
 * Strongly typed
 * Generics
 * val and var syntax for variable declarations
@@ -43,9 +43,9 @@ Ideas
 
 Questions
 =========
-* Register or Stack based function calls?  (Not sure it matters if we're optimizing for fewest clock cycles vs optimal register allocation in the assembly generation)
+* Register or Stack based function calls?  (Not sure it matters if we're optimizing for fewest clock cycles vs optimal register allocation in the assembly generation) (this seems to depend on the architecture of the instruction set and os.  Need to do more research to better understand)
 * Not sure that Garbage collection should be implemented or if reference counting should be used instead
-* Want to mimic co-routines from Go and Kotlin, but unsure how that will affect wanting to be directly callable from C/C++ code
+* Want to mimic co-routines from Go and Kotlin, but unsure how that will affect wanting to be directly callable from C/C++ code.  The biggest question here is should the co-routine implementation be stack or offstack based.
 * How exactly should modules be declared, and linked together?
 * How important is ASLR protections in a 'Safe' langage?  As far as I know, [GO lang does not implement this](https://rain-1.github.io/golang-aslr.html), it has been suggested for Rust, but as of this writing it [hasn't been implemented](https://github.com/rust-lang/rust/issues/15179)
 * What is stack safe?  Is this used to help prevent stack smashing?
