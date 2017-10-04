@@ -49,3 +49,4 @@ Questions
 * How exactly should modules be declared, and linked together?
 * How important is ASLR protections in a 'Safe' langage?  As far as I know, [GO lang does not implement this](https://rain-1.github.io/golang-aslr.html), it has been suggested for Rust, but as of this writing it [hasn't been implemented](https://github.com/rust-lang/rust/issues/15179)
 * What is stack safe?  Is this used to help prevent stack smashing?
+* What all can be taken away from category theory and applied to a 'non-academic' language [category-theory](https://github.com/hmemcpy/milewski-ctfp-pdf)
