@@ -25,6 +25,8 @@ Ideas
 * Built in reference counting for heap allocated memory (not sure that I want to have to implement garbage collection)
 * Escape analysis similar to Go for memory allocations, i.e. does a memory structure need reference counting or not?  Go uses this to figure out if something should be heap allocated or stack allocated.
 * Strongly typed
+  * Been looking at Dependently typed langauges, and there are some interesting ideas, but I'm currently unsure how to apply those ideas to a non-functional language.
+  * One interesting thing I noticed when looking at defining methods in functional languages.  You can at compile time determine which methods should be invoked by looking at the type information.  This probably is not a performance improvement, since you can do the same with method overloading in imperitive languages, but it did make for a very concise declaration.
 * Generics
 * val and var syntax for variable declarations
 * Type inference
@@ -47,6 +49,8 @@ Questions
 * Not sure that Garbage collection should be implemented or if reference counting should be used instead
 * Want to mimic co-routines from Go and Kotlin, but unsure how that will affect wanting to be directly callable from C/C++ code.  The biggest question here is should the co-routine implementation be stack or offstack based.
 * How exactly should modules be declared, and linked together?
-* How important is ASLR protections in a 'Safe' langage?  As far as I know, [GO lang does not implement this](https://rain-1.github.io/golang-aslr.html), it has been suggested for Rust and seems to have been [implemented recently](https://github.com/rust-lang/rust/issues/15179)
+* How important is ASLR protections in a 'Safe' langage?  As far as I know, ~~[GO lang does not implement this](https://rain-1.github.io/golang-aslr.html)~~ this was added as an optional feature in 1.6, it has been suggested for Rust and seems to have been [implemented recently](https://github.com/rust-lang/rust/issues/15179)
 * What is stack safe?  Is this used to help prevent stack smashing?
 * What all can be taken away from category theory and applied to a 'non-academic' language [category-theory](https://github.com/hmemcpy/milewski-ctfp-pdf)
+* Is there a way that Guards could be built into the langauge?
+  * How would they function?  Throw an exception?  If so, why not a stdlib instead of built into the language.
