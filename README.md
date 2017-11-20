@@ -20,6 +20,7 @@ Ideas
 * Directly callable from C/C++
 * Can directly call into C/C++ (FFI?)
 * Automatic bounds checking
+* Design Goal - elliminate as much of {} as possible.  Similar if else syntax to go, also look at Quorum for insperation
 * Provide helper parsing libraries that encourage safety and performance (interesting paper on parsing in the [rust language](https://blog.acolyer.org/2017/08/15/writing-parsers-like-it-is-2017/)
 * Want to provide as close to C performance as possible for TLS
 * Built in reference counting for heap allocated memory (not sure that I want to have to implement garbage collection)
