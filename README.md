@@ -36,11 +36,12 @@ Ideas
 * Goal is to be a 'memory safe' language
 * Currying built in
 * Modular linking - goal here is to allow different libraries that have the same dependencies, but at different versions, to be used in the same project.
-* Static and dynamic linking
   * Might mean needing a different linker that has a better solution for resolving dependencies than what is currently the norm.
   * How might one defend against dependency hell
   * This would need to take into account not only the version of the library the project depends on, but also the arch (x86, wasm, arm, any, etc)
     * How would this structure support something like SIMD instructions which are not always supported on every platform (for example, wasm does not yet support SIMD instructions.  This could maybe be solved by looking for the library for your target arch, and then falling back to the `any` arch if a arch specific one did not exist.  Will need to consider this more.)
+
+* Static and dynamic linking
 * Built in support for a debugger
 * Built in compiler support to detect use after free bugs
 * String literal interpolation
