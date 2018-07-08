@@ -31,7 +31,7 @@ Ideas
 * Generics
 * val and var syntax for variable declarations
 * Type inference
-* A flowable equivalent to [RxJava](http://reactivex.io/RxJava/2.x/javadoc/io/reactivex/Flowable.html)
+* A flowable equivalent to [RxJava](http://reactivex.io/RxJava/2.x/javadoc/io/reactivex/Flowable.html) (I've been using co-routines more recently, and they seem to solve the problem that RxJava was intended to solve as well, but in a more elegant way, and with a smaller learning curve.)
 * Want to be able to support zero copy parsing
 * Goal is to be a 'memory safe' language
 * Currying built in
