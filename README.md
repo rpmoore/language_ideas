@@ -37,6 +37,10 @@ Ideas
 * Currying built in
 * Modular linking - goal here is to allow different libraries that have the same dependencies, but at different versions, to be used in the same project.
 * Static and dynamic linking
+  * Might mean needing a different linker that has a better solution for resolving dependencies than what is currently the norm.
+  * How might one defend against dependency hell
+  * This would need to take into account not only the version of the library the project depends on, but also the arch (x86, wasm, arm, any, etc)
+    * How would this structure support something like SIMD instructions which are not always supported on every platform (for example, wasm does not yet support SIMD instructions.  This could maybe be solved by looking for the library for your target arch, and then falling back to the `any` arch if a arch specific one did not exist.  Will need to consider this more.)
 * Built in support for a debugger
 * Built in compiler support to detect use after free bugs
 * String literal interpolation
@@ -47,7 +51,7 @@ Ideas
 Questions
 =========
 * Register or Stack based function calls?  (Not sure it matters if we're optimizing for fewest clock cycles vs optimal register allocation in the assembly generation) (this seems to depend on the architecture of the instruction set and os.  Need to do more research to better understand)
-* * It seems that there is an [opinion](https://markfaction.wordpress.com/2012/07/15/stack-based-vs-register-based-virtual-machine-architecture-and-the-dalvik-vm/) that Virtual Machines implemented using Registers performs more quickly
+  * It seems that there is an [opinion](https://markfaction.wordpress.com/2012/07/15/stack-based-vs-register-based-virtual-machine-architecture-and-the-dalvik-vm/) that Virtual Machines implemented using Registers performs more quickly
 * Not sure that Garbage collection should be implemented or if reference counting should be used instead
 * Want to mimic co-routines from Go and Kotlin, but unsure how that will affect wanting to be directly callable from C/C++ code.  The biggest question here is should the co-routine implementation be stack or offstack based.
 * How exactly should modules be declared, and linked together?
