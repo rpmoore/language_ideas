@@ -47,6 +47,7 @@ Ideas
 Questions
 =========
 * Register or Stack based function calls?  (Not sure it matters if we're optimizing for fewest clock cycles vs optimal register allocation in the assembly generation) (this seems to depend on the architecture of the instruction set and os.  Need to do more research to better understand)
+* * It seems that there is an [opinion](https://markfaction.wordpress.com/2012/07/15/stack-based-vs-register-based-virtual-machine-architecture-and-the-dalvik-vm/) that Virtual Machines implemented using Registers performs more quickly
 * Not sure that Garbage collection should be implemented or if reference counting should be used instead
 * Want to mimic co-routines from Go and Kotlin, but unsure how that will affect wanting to be directly callable from C/C++ code.  The biggest question here is should the co-routine implementation be stack or offstack based.
 * How exactly should modules be declared, and linked together?
