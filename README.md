@@ -40,7 +40,8 @@ Ideas
   * How might one defend against dependency hell
   * This would need to take into account not only the version of the library the project depends on, but also the arch (x86, wasm, arm, any, etc)
     * How would this structure support something like SIMD instructions which are not always supported on every platform (for example, wasm does not yet support SIMD instructions.  This could maybe be solved by looking for the library for your target arch, and then falling back to the `any` arch if a arch specific one did not exist.  Will need to consider this more.)
-* Static and dynamic linking
+  * Static and dynamic linking
+  * Do we also need to take into account the os when doing linking?  If so that means we would have three constraints when resolving dependencies: version, arch, and os.
 * Built in support for a debugger
 * Built in compiler support to detect use after free bugs
 * String literal interpolation
