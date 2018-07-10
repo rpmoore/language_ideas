@@ -35,7 +35,7 @@ Ideas
 * Want to be able to support zero copy parsing
 * Goal is to be a 'memory safe' language
 * Currying built in
-* Modular linking - goal here is to allow different libraries that have the same dependencies, but at different versions, to be used in the same project.
+* [Modular linking](DependencyResolution.md) - goal here is to allow different libraries that have the same dependencies, but at different versions, to be used in the same project.
   * Might mean needing a different linker that has a better solution for resolving dependencies than what is currently the norm.
   * How might one defend against dependency hell
   * This would need to take into account not only the version of the library the project depends on, but also the arch (x86, wasm, arm, any, etc)
