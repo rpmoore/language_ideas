@@ -48,6 +48,7 @@ Ideas
 * Nullability built into the type system (similar to kotlin in this respect)
 * Method chaining with the `|` operator is an interesting idea (saw this in elm with the `|>` operator.)  This seems to help cleanup wrapped functions calls by allowing you to unwind the calls.
 * Bit Mapping operations built into the language.  The Goal here would be to help protocol developers to ease the transition away from C based methods, to a new method providing direct mappings to bit offsets in byte blocks that automatically implements the mapping and shift operation.  Basically, the idea here is to allow a developer to specify the structure of the byte block and have it spit out the values for the implementer reducing the chances for errors, and improving a developer's efficiency. 
+* RAII (Resource Acquisition Is Initialization)
 
 Questions
 =========
