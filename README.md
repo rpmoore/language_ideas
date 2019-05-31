@@ -62,3 +62,4 @@ Questions
 * What all can be taken away from category theory and applied to a 'non-academic' language [category-theory](https://github.com/hmemcpy/milewski-ctfp-pdf)
 * Is there a way that Guards could be built into the langauge?
   * How would they function?  Throw an exception?  If so, why not a stdlib instead of built into the language.
+  * Guards seem like they are a feature of dependently typed languages
